@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROKUR.COM</title>
+    <style>
+          @font-face {
+            font-family: 'StudioBrandFont'; 
+            src: url('font/small font.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            
+        }
+          * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        body {
+            background-color: #1b1b1b;
+            font-family: 'StudioBrandFont', sans-serif;
+            
+        }
+        hr{
+            opacity: 15%;
+        }
+        .whit{
+            color: aliceblue;
+            font-size: 25px;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 2rem auto;
+            max-width: 1200px;
+        }
+        .navegation ul {
+            display: flex;
+            list-style-type: none;
+            gap: 2rem;
+
+        }
+        .navegation a {
+            text-decoration: none;
+            color: #eeeeee;
+            font-size: 30px;
+            
+        }
+        .navegation a:hover {
+            color: rgb(38, 185, 38);
+        }
+        .hero{
+            justify-content: space-between;
+            align-items: center;
+            margin: 5rem auto;
+            max-width: 1200px;
+        }
+        .name{
+            color: aliceblue;
+            font-size: 80px;
+        }
+        .titl{
+            color: rgb(38, 185, 38);
+            font-size: 95px;
+        }
+        .herobtn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .hireme {
+            background-color: rgb(38, 185, 38);
+            color: #eeeeee;
+            border-radius: 24px;
+            text-decoration: none;
+            padding: 0.5rem 1.5rem;
+            text-shadow: 0px 4px 4px rgba(32, 32, 32, 0.699);
+        }
+
+        .cv {
+            background-color: rgba(128, 128, 128, 0.233);
+            color: #eeeeee;
+            border-radius: 24px;
+            text-decoration: none;
+            padding: 0.5rem 1.5rem;
+            text-shadow: 0px 4px 4px rgba(32, 32, 32, 0.699);
+            backdrop-filter: blur(4px);
+        }
+       .herobtn ul {
+            display: flex;
+            list-style-type: none;
+            gap: 1rem;
+            padding: 0;
+            margin: 0;
+            align-items: center;
+        }
+        .herobtn li {
+            display: flex;
+        }
+        .abuotme{
+            justify-content: space-between;
+            align-items: center;
+            margin: 1rem auto;
+            max-width: 1200px;
+            gap: 10rem;
+        }
+        .abuotme h2{
+            color: rgb(38, 185, 38);
+            font-size: 75px;
+            gap: 1rem;
+        }
+        .abuotme .p1{
+            color: aliceblue;
+            font-size: 40px;
+            gap: 1rem;
+            margin: 1rem;
+        }
+        .abuotme .p2{
+            color: aliceblue;
+            font-size: 50px;
+            gap: 1rem;
+        }
+        .myprojects{
+            justify-content: space-between;
+            align-items: center;
+            margin: 1rem auto;
+            max-width: 1200px;
+            gap: 10rem;
+        }
+        .projectscont{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+            margin: 5rem auto;
+            max-width: 1200px;
+        }
+        .myprojects h2{
+            color:rgb(38, 185, 38) ;
+            font-size: 75px;
+            margin: 2rem auto;
+        }
+        .myprojects ul{
+            display: flex;
+            list-style-type: none;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .myprojects li{
+            border-radius: 15px;
+            background-color: rgba(57, 62, 70, 0.5);
+            backdrop-filter: blur(4px);
+            padding: 1rem 1rem;
+        }
+        
+        .myprojects li :hover{
+            transform: scale(1.1);
+        }
+        .myprojects li img{
+            border-radius: 15px;
+        }
+        .contact{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 1rem auto;
+            max-width: 1200px;
+            gap: 20rem;
+        }
+        .contactcont{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            margin: 1rem auto;
+            max-width: 1200px;
+        }
+        .contactname{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 5px;
+            margin-bottom: 10px;
+            font-size: 75px;
+        }
+        .co{
+            color: aliceblue;
+            font-size: 75px;
+        }
+        .me{
+            color:rgb(38, 185, 38) ;
+            font-size: 75px;
+            
+        }
+        .emailandphone{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            margin-bottom: 10px;
+            font-size: 30px;
+        }
+        .emailandphone .a2{
+            font-size: 25px;
+            color: aliceblue;
+            padding: 0.1rem 12rem;
+        }
+        .emailandphone a:hover{
+            color: rgb(38, 185, 38);
+        }
+        .emailandphone a{
+            color: aliceblue;
+            text-decoration: none;
+            font-size: 25px;
+        }
+        .emailandphone h3{
+            color: aliceblue;
+            font-size: 30px;
+            padding: 0.1rem 12rem;
+        }
+        .emailandphone h4{
+            color: aliceblue;
+            font-size: 20px;
+            padding: 0.000000001rem 13rem;
+        }
+        .emailandphone .h44{
+            color: aliceblue;
+            font-size: 20px;
+            padding: 0.000000001rem 17.5rem;
+        }
+        .emailandphonetitle{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            margin-bottom: 10px;
+        }
+        .emailandphone2{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            margin-bottom: 10px;
+        }
+        .emailandphone ul{
+            list-style-type: none;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .emailandphone ul li .h43{
+            color: aliceblue;
+            font-size: 20px;
+            padding: 2rem 31.5rem;
+        }
+        .socialmedia{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            margin-bottom: 10px;
+        }
+        .socialmedia a{
+            border-radius: 50px;
+            background-color: rgba(57, 62, 70, 0.5);
+            backdrop-filter: blur(4px);
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+        .socialmedia a:hover{
+            transform: scale(1.1);
+        }
+        footer{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+        footer h4{
+            color: aliceblue;
+            font-size: 20px;
+            margin: 0.5rem 10rem;
+        }
+        
+        @media (max-width: 1023px){
+            header{
+                margin: 0.5rem auto;
+            }
+            .navegation a{
+                font-size: 16.5px;
+            }
+            .navegation ul{
+                gap: 1rem;
+            }
+            .whit{
+                font-size: 16.5px;
+            }
+            .hero{
+                margin: 2.5rem auto;
+            }
+            .name{
+                font-size: 70px;
+            }
+            .titl{
+                font-size: 80.5px;
+            }
+            .abuotme{
+                gap: 5rem;
+            }
+            .abuotme h2{
+                font-size: 60px;
+                gap: 0.5px;
+            }
+            .abuotme .p1{
+                font-size: 20px;
+                gap: 0.5px;
+            }
+            .abuotme .p2{
+                font-size: 30px;
+                gap: 0.5px;
+            }
+            .myprojects{
+                margin: 0.5rem auto;
+                gap: 5rem;
+            }
+            .projectscont{
+                margin: 2.5rem auto;
+            }
+            .myprojects h2{
+                font-size: 65px;
+                margin: 1rem auto;
+            }
+            .myprojects ul{
+                gap: 7.5px;
+            }
+            .myprojects li img{
+                width: 200px;
+            }
+            .contact{
+                margin: 0.5rem;
+                gap: 10px;
+            }
+            .contactcont{
+                gap: 1rem;
+                margin: 0.5rem auto;
+            }
+            .contactname{
+                gap: 2.5px;
+                margin-bottom: 5px;
+                font-size: 65px;
+            }
+            .co{
+                font-size: 65px;
+            }
+            .me{
+                font-size: 65px;
+            }
+        }
+
+
+    
+    </style>
+</head>
+<body>
+    <header>
+        <h2 class="whit">prokur.exe</h2>
+        <nav class="navegation">
+            <ul>
+                <li><a href="#hub">القاعة </a></li>
+                <li><a href="#aboutme">عني</a></li>
+                <li><a href="#project">مشاريعي</a></li>
+                <li><a href="#contact">تواصل معي</a></li>
+            </ul>
+        </nav>
+    </header>
+    <hr/>
+    <section class="hero" id="#hub">
+        <div>
+            <h2 class="name" align="center"> انا عبدالله</h2>
+            <h1 class="titl" align="center">مبرمج العاب</h1>
+            <div class="herobtn">
+                <ul>
+                    <li><a class="hireme" href="#contact">اتصل بي</a></li>
+                    <li><a class="cv" >cvحمل</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <hr/>
+    <section class="abuotme" id="aboutme">
+        <h2 align="center">عني</h2>
+        <p class="p1" align="center">مبرمج | يوتيوبر | مدير استوديو</p>
+        <p class="p2" align="center">مرحبا انا عبدالله مبرمج محترف و رئيس استوديو العاب و انا اسعي لتغير مكانة العرب في البرمجة</p> 
+    </section>
+    <hr/>
+    <section class="myprojects" id="project">
+        <div class="projectcont">
+            <div class="projtitl">
+                <h2 align="center">مشاريعي</h2>
+            </div>
+            <ul>
+                <li>
+                    <a>
+                        <img 
+                        src="img/galaxygame.png" 
+                        alt="galaxy game"
+                        width="300px" 
+                        >
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <img 
+                        src="img/onexrobot.png" 
+                        alt="onex robot"
+                        width="300px"
+                        >
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <img 
+                        src="img/sopplant.png" 
+                        alt="sop plant"
+                        width="300px"
+                        >
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <hr/>
+    <section class="contact" id="contact">
+        <div class="contactcont">
+            <div class="contactname">
+                <h2 class="me" align="center">معي</h2>
+                <h2 class="co" align="center">تواصل</h2>
+            </div>
+            <div class="emailandphone">
+                <ul>
+                    <li>
+                        <div class="emailandphonetitle">
+                           <h4 class="h44">:البريد الاالكتروني</h4>
+                           <h4>:رقم الهاتف </h4>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="emailandphone2">
+                            <a href="mailto:tpk.1network@gmail.com" class="email" target="_blank">
+                                <h3 class="a2">
+                                   tpk.1network@gmail.com
+                                </h3>
+                            </a>
+                            <h3>+20 01149274291</h3>
+                        </div>
+                    </li>
+                    <li>
+                        <h4 class="h43">:حسابات التواصل الاجتماعي</h4>
+                    </li>
+                    <li>
+                        <div class="socialmedia">
+                            <a href="https://discord.gg/vDXvjrfY2G" target="_blank">
+                                <img src="img/discord.png" width="25px" alt="discord">
+                            </a>
+
+                            <a href="https://www.instagram.com/tpk.network/" target="_blank">
+                                <img src="img/instagram.png" width="25px" alt="instagram">
+                            </a>
+
+                            <a href="https://x.com/TPKNETWORK" target="_blank">
+                                <img src="img/x.png" width="25px" alt="twweter_x" >
+                            </a>
+
+                            <a href="https://www.youtube.com/channel/UCBV9H0e9EbMp-YY8fzRdjmA" target="_blank">
+                                <img src="img/youtube.png" width="25px" alt="youtube">
+                            </a>
+
+                            <a href="https://steamcommunity.com/my/" target="_blank">
+                                <img src="img/steam.png" width="25px" alt="steam">
+                            </a>
+
+                            <a href="https://www.reddit.com/user/TPK_NETWORK_STUDIOS/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button" target="_blank">
+                                <img src="img/reddit.png" width="25px" alt="reddit">
+                            </a>
+                            <a href="https://tpk-network-studio.itch.io/" target="_blank">
+                                <img src="img/itch.io.png" width="25px" alt="itch.io">
+                            </a>
+                            <a href="https://www.linkedin.com/in/tpk-network-studios-968b56447/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BcXxPuoFwQTaV7s7k6yWeZg%3D%3D" target="_blank">
+                                <img src="img/linkedin.png" width="25px" alt="linkedin">
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </section>
+    <hr/>
+    <footer>
+        <h4>copyrit@prokur.exe</h4>
+        <h4>مبرمج الموقع : عبدالله احمد</h4>
+    </footer>
+</body>
+</html>
